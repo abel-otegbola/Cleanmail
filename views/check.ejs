@@ -1,0 +1,29 @@
+ <%- include("./partials/header.ejs") %>
+
+ <%- include("./partials/nav.ejs") %>
+
+        <aside class="checkResult">
+            <h1>Email verification result</h1>
+            <div class="para">
+                <div class="field">
+                    <table>
+                        <thead>
+                            <tr>                                    
+                                <th>Date</th>
+                                <th>Email Address</th>
+                                <th>Result</th>
+                                <th>Reason</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <p id="p"><%= email %></p>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="check.js"></script>
+ <%- include("./partials/footer.ejs") %>
+    

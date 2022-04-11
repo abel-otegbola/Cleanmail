@@ -1,0 +1,53 @@
+<div class="home">
+
+    <%- include("./partials/header.ejs") %>
+
+    <div class="home__heading">
+        <div class="home__heading--texts">
+            <h1>Verify Your Email</h1>
+            <h4>Email verification application solution to keep your email list spam free, clean and genuine.</h4>
+            <a href="/single">Try now</a>
+        </div>
+        <img src="imgs/HomeCards_header.png"/>
+    </div>
+
+    <div class="home__features">
+        <h2>Features</h2>
+
+        <div class="home__features--single">
+            <div class="home__features--texts">
+                <h1>Single Mail verification</h1>
+                <h4>Make a quick verification of an email fast and efficiently</h4>
+                <div class="single__verify">
+                    <form action="/check" method="POST">
+                        <input type="email" placeholder="Try it out" name="email"/>
+                        <button type="submit">Verify Email</a>
+                    </form>
+                </div>
+            </div>
+            <img src="imgs/HomeIllus_single.png"/>
+        </div>
+
+        <div class="home__features--bulk">
+            <img src="imgs/HomeIllus_multiple.png"/>
+            <div class="home__features--texts">
+                <h1>Bulk Mail verification</h1>
+                <h4>Verification of multiple emails fast and efficiently all at once.</h4>
+                <a href="/bulk">Verify now</a>
+            </div>
+        </div>
+
+        <div class="home__features--api">
+            <div class="home__features--texts">
+                <h1>API Integration</h1>
+                <h4>Integration of cleanmail api into your applications can be done in very simple steps.</h4>
+                <a href="/email-api">Documentation</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<%- include("./partials/footer.ejs") %>

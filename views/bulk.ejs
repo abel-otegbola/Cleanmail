@@ -1,0 +1,27 @@
+
+ <%- include("./partials/header.ejs") %>
+
+ <%- include("./partials/nav.ejs") %>
+
+        <aside class="box bulk">
+            <h1>Bulk email verification</h1>
+            <div class="para">
+                <h3><li>Enter your Email ID below and check the results! </li>
+                    <li>Click the plus to add additional email address</li>
+                </h3>
+                <form action="/check-bulk" id="email-form" class="bulk-email" method="POST">
+                    <div class="msg"></div>
+                    <div class="emailInputs">
+                        <input type="email" placeholder="Enter Email..." name="email1">
+                    </div>
+                    <i class="fa fa-plus"></i></br>
+                    <button type="submit">Verify</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+    
+    <script src="bulkCheck.js"></script>
+
+ <%- include("./partials/footer.ejs") %>
+    

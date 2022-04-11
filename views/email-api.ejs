@@ -1,0 +1,78 @@
+<%- include("./partials/header.ejs") %>
+
+ <%- include("./partials/nav.ejs") %>
+
+        <aside class="box">
+            <h1>Email verification API</h1>
+            <div class="para">
+
+                <p>You can always use our api to integrate the validation and verification into your projects.
+                    Our api is very simple and easy to integrate.
+                </p>
+
+                <h2>API REQUEST</h2>
+                <h3>Single email verification api request</h3>
+                <input type="text" value="cleanmail.com/api/single/example@mail.com" readonly />
+                <h3>Result for valid email address</h3>
+                <pre>
+[
+    email: 'example@mail.com',
+    did_you_mean: '',
+    user: 'example',
+    domain: 'mail.com',
+    format_valid: true,
+    mx_found: true,
+    smtp_check: true,
+    catch_all: false,
+    role: false,
+    disposable: false,
+    free: true,
+    score: 0.64
+]
+                </pre>
+                
+                <h3>Multiple email verification api request</h3>
+                <input type="text" value="cleanmail.com/api/multiple" readonly />
+                <p>The multiple email verification is best done using a form with a post request to the api</p>
+                <p>Example of a typical form is:</p>
+                <img src="imgs/Capture.jpg" />
+                <h3>Result for valid and invalid email address</h3>
+                <pre>
+[
+    {
+        email: 'valid@gmail.com',
+        did_you_mean: '',
+        user: 'valid',
+        domain: 'gmail.com',
+        format_valid: true,
+        mx_found: true,
+        smtp_check: true,
+        catch_all: false,
+        role: false,
+        disposable: false,
+        free: true,
+        score: 0.64
+    },
+    {
+        email: 'invalid@gmail.com',
+        did_you_mean: '',
+        user: 'invalid',
+        domain: 'gmail.com',
+        format_valid: true,
+        mx_found: true,
+        smtp_check: false,
+        catch_all: false,
+        role: false,
+        disposable: false,
+        free: true,
+        score: 0.48
+    }
+]
+                </pre>
+                
+            </div>
+        </aside>
+    </div>
+
+ <%- include("./partials/footer.ejs") %>
+    

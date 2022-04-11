@@ -1,0 +1,38 @@
+<%- include("./partials/header.ejs") %>
+
+<div class="contacts">
+    <h1>Contact us</h1>
+
+    <div class="logo">
+        <img src="/imgs/logo.svg" width="30px" height="30px"/>
+        Cleanmail
+    </div>
+    <div class="contact-box">
+        <form action="message">
+            <h3>SEND US A MESSAGE</h3>
+            <label>
+                <p><i class="fa fa-user"></i> Name :</p>
+                <input type="text" name="name"/>
+            </label>
+            <label>
+                <p><i class="fa fa-envelope"></i> Email :</p>
+                <input type="email" name="email" />
+            </label>
+            <label>
+                <p><i class="fa fa-edit"></i> Message :</p>
+                <textarea name="msg"></textarea>
+            </label>
+        </form>
+        <div class="messaging">
+            <h3>CONTACTS</h3>
+            <p><i class="fa fa-phone"></i> (+234)70 6098 9331</p>
+            <p><i class="fa fa-envelope"></i> Abel15655@gmail.com</p>
+            <a href="https://linkedin.com/abel" class="fa fa-linkedin"></a>
+            <a href="https://facebook.com/abel" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/abel" class="fa fa-twitter"></a>
+        </div>
+    </div>
+</div>
+
+
+<%- include("./partials/footer.ejs") %>

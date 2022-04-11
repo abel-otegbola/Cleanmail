@@ -1,0 +1,39 @@
+<%- include("./partials/header.ejs") %>
+
+<%- include("./partials/nav.ejs") %>
+
+       <aside class="checkResult">
+           <h1>Email verification result</h1><a href="/bulk" class="fa fa-chevron-left" title="back"></a>
+           <div class="para">
+               <div class="field">
+                   <table id="bulktable">
+                       <thead>
+                           <tr>
+                               <th>Date</th>
+                               <th>Email Address</th>
+                               <th>Result</th>
+                               <th>Reason</th>
+                           </tr>
+                       </thead>
+                       <div class="emails">
+                            <% emailArray.forEach(response => { %>
+                                <span class="email"><%= response %></span> |     
+                            <% }) %>
+                        </div>
+                       <tbody id="table-body">
+                       </tbody>
+                    </table>
+                    <a id="save">Download <i class="fa fa-upload"></i></a>
+               </div>
+           </div>
+       </aside>
+   </div>
+
+   <script src="check-bulk.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js">
+   </script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.0.28/jspdf.plugin.autotable.js"></script>
+
+   <script src="saveTable.js"></script>
+   
+<%- include("./partials/footer.ejs") %>
+   

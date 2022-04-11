@@ -1,0 +1,21 @@
+
+ <%- include("./partials/header.ejs") %>
+
+ <%- include("./partials/nav.ejs") %>
+
+        <aside class="box single">
+            <h1>Single email verification</h1>
+            <div class="para">
+                <h3>Enter your Email ID below and click verify</h3>
+                <form action="/check" id="email-form" method="POST">
+                    <div class="msg"></div>
+                    <input type="email" placeholder="Enter Email..." name="email">
+                    <button type="submit">Verify</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <script src="singleCheck.js"></script>
+ <%- include("./partials/footer.ejs") %>
+    
